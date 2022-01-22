@@ -4,10 +4,12 @@ const express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
+    cors = require('cors'),
     graphqlHTTP = require('express-graphql').graphqlHTTP,
     schema = require('./schema/schema'),
     PORT = process.env.PORT || 4000;
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
