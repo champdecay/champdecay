@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
 import { gql, useQuery } from '@apollo/client';
+import Banner from '../Components/Banner';
 import Blogbox from "../Components/Blogbox";
 import Title from "../Components/Title";
 
 export default function Blog() {
     const GET_POSTS = gql`query {
-        posts{ _id, name, slug, featured_image, excerpt, tags, createdAt }
+        posts(limit: 4){ _id, name, slug, featured_image, excerpt, tags, createdAt }
     }`;
 
     const { loading, error, data } = useQuery(GET_POSTS);
@@ -17,8 +17,9 @@ export default function Blog() {
     return (
         <section>
             <div className="container mx-auto py-5 text-center">
+                <Banner />
                 <Title>Latest Articles</Title>
-                <div className="flex flex-wrap my-4">
+                <div className="flex flex-wrap my-4 justify-center">
                     {data && data.posts.map((item, i) => {
                         return <Blogbox key={item._id} data={item} />
                     })}

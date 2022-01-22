@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{font-family: 'Open Sans', sans-serif;}
+
+.prose pre:before {
+    content: 'Copy';
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-weight: 500;
+    font-size: 16px;
+    color: #aaa;
+}
+.prose pre {
+    position: relative;
+    cursor: pointer;
+}

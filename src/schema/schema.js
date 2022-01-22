@@ -53,10 +53,37 @@ const RootQueryType = new GraphQLObjectType({
         posts: {
             type: new GraphQLList(PostType),
             description: 'List of Posts',
+            args: {
+                limit: {
+                    type: GraphQLInt,
+                    description: 'Limit the number of posts'
+                },
+                skip: {
+                    type: GraphQLInt,
+                    description: 'Skip the number of posts'
+                },
+                tag: {
+                    type: GraphQLString,
+                    description: 'Filter posts by tag'
+                }
+            },
             resolve: async (parent, args, context, info) => {
-                const posts = await Post.find({}).sort({ 'createdAt': -1 })
-                return posts
+                let query = Post.find({})
+                if (args.limit) {
+                    query = query.limit(args.limit)
+                }
+                if (args.skip) {
+                    query = query.skip(args.skip)
+                }
+                if (args.tag) {
+                    query = query.where('tags').equals(args.tag)
+                }
+                return query.exec()
             }
+
+            //     const posts = await Post.find({}).sort({ 'createdAt': -1 })
+            //     return posts
+            // }
         },
         post: {
             type: PostType,
