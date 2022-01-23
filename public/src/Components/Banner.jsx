@@ -26,11 +26,11 @@ export default function Banner() {
     return <>
         <section className='container'>
             <h1 className="text-10xl min-h-screen flex items-center justify-center" id="greet">Hey,</h1>
-            <div class="grid grid-cols-5 gap-8 pb-48" id="IntroContent">
-                <div class="col-span-1 text-right">
+            <div className="grid grid-cols-5 gap-8 pb-48" id="IntroContent">
+                <div className="col-span-1 text-right">
                     <h3 className="text-3xl pt-5">Intro</h3>
                 </div>
-                <div class="col-span-4 text-left">
+                <div className="col-span-4 text-left">
                     <h3 className="text-7xl font-bold leading-tight"><Highlight>I'm ChampDecay, a JavaScript Developer focusing on web solutions and purposeful experiences for tomorrow's brands.</Highlight></h3>
                 </div>
             </div>
