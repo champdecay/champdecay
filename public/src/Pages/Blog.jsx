@@ -16,7 +16,7 @@ export default function Blog() {
     console.log(data);
     return (
         <section>
-            <div className="container mx-auto py-5 text-center">
+            <div className="container mx-auto">
                 <Banner />
                 <Title>Latest Articles</Title>
                 <div className="flex flex-wrap my-4 justify-center">
