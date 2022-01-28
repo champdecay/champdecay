@@ -68,7 +68,7 @@ const RootQueryType = new GraphQLObjectType({
                 }
             },
             resolve: async (parent, args, context, info) => {
-                let query = Post.find({})
+                let query = Post.find({}).sort({ 'createdAt': -1 })
                 if (args.limit) {
                     query = query.limit(args.limit)
                 }
