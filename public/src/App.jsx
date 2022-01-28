@@ -1,9 +1,10 @@
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import Blog from "./Pages/Blog";
+import Home from "./Pages/Home";
 import Post from "./Pages/Post";
 import BG from "./assets/4940019.jpg";
+import Blog from "./Pages/Blog";
 
 export default function App() {
   return (
@@ -12,8 +13,9 @@ export default function App() {
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={<Blog />} />
             <Route path="/blog/:slug" element={<Post />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/" element={<Home />} />
           </Routes>
         </main>
         <Footer />
