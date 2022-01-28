@@ -11,7 +11,7 @@ export default function Blogbox({ data }) {
                 <div className="h-full rounded-xl overflow-hidden backdrop-blur-md bg-white/30 shadow">
                     <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={featured_image} alt="blog" width={300} height={200} />
                     <div className="p-6">
-                        <h4 className="font-bold text-secondary mb-1 text-sm">{tags.map(el => `${el} `)} | {dayjs(createdAt).format("Do MMM, YYYY")}</h4>
+                        <h4 className="font-bold text-secondary mb-1 text-sm">{tags.map(el => `${el} `)} | {dayjs(Number(+createdAt)).format("Do MMM, YYYY")}</h4>
                         <h2 className="title-font text-lg font-bold  mb-3">{name}</h2>
                         <p className="leading-relaxed mb-3 ">{excerpt}</p>
                         <div className="">
@@ -26,7 +26,7 @@ export default function Blogbox({ data }) {
                     </div>
                 </div> :
                 <div className="h-full px-8 pt-16 pb-24 rounded-xl overflow-hidden text-center relative flex flex-col items-center justify-center backdrop-blur-md bg-white/30 shadow">
-                    <h4 className="tracking-widest font-bold text-secondary mb-1 text-sm">{tags.map(el => `${el} `)} | {dayjs(createdAt).format("Do MMM, YYYY")}</h4>
+                    <h4 className="tracking-widest font-bold text-secondary mb-1 text-sm">{tags.map(el => `${el} `)} | {dayjs(+createdAt).format("Do MMM, YYYY")}</h4>
                     <h2 className="title-font sm:text-2xl text-xl font-bold  mb-3">{name}</h2>
                     <p className="leading-relaxed break-all mb-3">{excerpt}</p>
                     <Link to={`/blog/${slug}`} className="text-secondary inline-flex items-center md:mb-2 lg:mb-0">Learn More

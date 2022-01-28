@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown'
 export default function Post() {
     dayjs.extend(advancedFormat)
     const { slug } = useParams();
+    console.log(slug);
     const GET_POST = gql`{
         post(slug:"${slug}"){
           _id, name, content, featured_image, excerpt, tags, createdAt
