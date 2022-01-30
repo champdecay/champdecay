@@ -11,7 +11,7 @@ export default function Blog() {
 
     return (
         <section>
-            <div className="container px-4 mt-24">
+            <div className="container px-4 pt-24">
                 <Title>Blogs</Title>
                 <div className="flex flex-wrap my-4 justify-center">
                     {loading && <p>Loading...</p>}
