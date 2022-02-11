@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=PT+Serif&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 *{font-family: 'Open Sans', sans-serif;}
+
+h1, h3{
+font-family: 'PT Serif', serif;
+}
 
 .prose pre:before {
     content: 'Copy';

@@ -28,7 +28,7 @@ export default function Banner() {
     return (
         <>
             <section id="banner" className="min-h-screen">
-                <h1 className="text-9xl lg:text-10xl min-h-screen flex items-center justify-center">Hello 👋,</h1>
+                <h1 className="text-9xl lg:text-10xl min-h-screen flex items-center justify-center">Hi there,</h1>
             </section>
             <section id="intro" className="py-12">
                 <div className="grid grid-cols-1 gap-8 pb-48 lg:grid-cols-5" id="IntroContent">
@@ -36,7 +36,7 @@ export default function Banner() {
                         <h3 className="text-3xl pt-5"><Title>Intro</Title></h3>
                     </div>
                     <div className="lg:col-span-4 text-left">
-                        <h4 className="text-5xl xl:text-7xl font-bold leading-tight text-center lg:text-left"><Highlight>I'm ChampDecay, a JavaScript Developer focusing on web solutions and purposeful experiences for tomorrow's brands.</Highlight></h4>
+                        <h4 className="text-5xl xl:text-7xl font-bold leading-tight text-center lg:text-left"><Highlight>I'm Dhruvang Gajjar, a JavaScript Developer focusing on web solutions and purposeful experiences for tomorrow's brands.</Highlight></h4>
                     </div>
                 </div>
             </section>

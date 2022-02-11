@@ -9,7 +9,8 @@ import Blog from "./Pages/Blog";
 export default function App() {
   return (
     <BrowserRouter>
-      <main style={{ backgroundImage: `url(${BG})`, backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+      {/* <main style={{ backgroundImage: `url(${BG})`, backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}> */}
+      <main>
         <Header />
         <Routes>
           <Route path="/blog/:slug" element={<Post />} />

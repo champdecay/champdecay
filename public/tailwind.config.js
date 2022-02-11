@@ -15,12 +15,7 @@ module.exports = {
     },
     container: {
       center: true
-    },
-    // fontFamily: {
-    //   sans: ["Inter var", "sans-serif"],
-    //   serif: ["Inter var", "serif"],
-    //   mono: ["Inter var", "monospace"]
-    // }
+    }
   },
   plugins: [
     require('@tailwindcss/typography'),
